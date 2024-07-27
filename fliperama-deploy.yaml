@@ -27,7 +27,7 @@ spec:
   selector:
     app: fliperama
   ports:
-    - protocol: TCP
+    - name: http
       port: 8888
       targetPort: 8000
   type: LoadBalancer
