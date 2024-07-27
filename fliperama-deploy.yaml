@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fliperama
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fliperama
+  template:
+    metadata:
+      labels:
+        app: fliperama
+    spec:
+      containers:
+      - name: fliperama
+        image: magicalyak/docker-games:battleship
+        ports:
+        - containerPort: 8888
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fliperama-service
+spec:
+  selector:
+    app: fliperama
+  ports:
+    - protocol: TCP
+      port: 8888
+      targetPort: 88888
+  type: ClusterIP
