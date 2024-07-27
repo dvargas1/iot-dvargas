@@ -27,7 +27,7 @@ spec:
   selector:
     app: fliperama
   ports:
-    - name: http
+    - protocol: TPC
       port: 8888
       targetPort: 8000
-  type: LoadBalancer
+  type: ClusterIP
