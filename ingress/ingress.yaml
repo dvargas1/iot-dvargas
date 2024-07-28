@@ -5,7 +5,7 @@ metadata:
   namespace: dev
 spec:
   rules:
-  - host: fliperama.com.42
+  - host: fliperama.com
     http:
       paths:
       - path: /
@@ -15,7 +15,7 @@ spec:
             name: fliperama-service
             port:
               number: 5000
-  - host: wil-app.com.42
+  - host: wil-app.com
     http:
       paths:
       - path: /
