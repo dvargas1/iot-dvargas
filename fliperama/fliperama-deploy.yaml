@@ -4,7 +4,7 @@ metadata:
   name: fliperama
   namespace: dev
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: fliperama
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: fliperama
-        image: magicalyak/docker-games:marioluigi
+        image: magicalyak/docker-games:monopoly
         ports:
         - containerPort: 8000
 ---
