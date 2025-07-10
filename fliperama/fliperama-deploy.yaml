@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: fliperama
-        image: magicalyak/docker-games:streetfighter2
+        image: magicalyak/docker-games:rebelchess
         ports:
         - containerPort: 8000
 ---
